@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La mente</title>
+
+<style>
+
+@font-face{
+font-family: "ronda";
+src: url('https://dl.dropboxusercontent.com/s/3o8sko3vhq0nce3/pf_ronda_seven.ttf?dl=0'); 
+format("truetype");
+}
+
+a{
+color: #EF233C;
+text-decoration: underline;
+}
+
+a:hover{
+color: #D80032;
+text-decoration: underline;
+}
+
+a:visited{
+color: #EF233C;
+text-decoration: underline;
+}
+
+body{
+background: #EDF2F4;
+color: #2B2D42;
+font-family: ronda;
+font-size: 0.7em;
+}
+
+.corpo{
+width: 40%;
+margin-right: auto;
+}
+
+@media (max-width: 800px) {
+
+  .corpo{
+	width: 95%;
+	margin-right: auto;
+  } 
+ 
+}
+
+img{
+filter: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="corpo">
+    
+<img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/e4d.png" style="float:right" width="30%">
+ 
+Puoi chiamarmi Assenzio, sono un giovane adulto di 22 anni.
+<br>
+Artista e editor, uso sia i pronomi maschili che quelli neutrali.
+<br>
+Amo fantasticare, dormire e passare il mio tempo libero rilassandomi.
+<br>
+Vedetemi come uno spettro o un gatto, un entità fittizia che non esiste nel mondo reale.
+<br><br>
+<a href="/index">indietro →</a>
+
+</div>
+
+</body>
+
+</html>
