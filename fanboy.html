@@ -1,0 +1,222 @@
+<html>
+
+<head>
+
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial scale=1">
+<title>Io come fan</title>
+<link rel="shortcut icon" href="/">
+
+
+
+<style>
+
+@font-face {
+  font-family: 'webfont';
+  src: url(https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/000webfont.ttf);
+}
+
+:root, body.light{
+--color: #fff;
+--font: #000;
+}
+
+body.dark{
+--color: #000;
+--font: #fff;
+}
+
+
+a{
+color: #679436;
+text-decoration: none;
+}
+
+a:hover{
+color:#679436;
+text-decoration: underline dotted;
+cursor: crosshair;
+}
+
+a:visited{
+color:#679436;
+}
+
+i, b{
+color: #da2c38;
+}
+
+u{
+color: #da2c38;
+text-decoration: underline dotted;
+}
+
+::selection{
+background: #427AA1;
+color: #fff;
+}
+
+[id] {
+	display: none;
+}
+[id]:target {
+  display:block;
+}
+
+
+
+body{
+background: var(--color);
+color: var(--font);
+font-family: 'webfont';
+font-size: 1.2em;
+}
+
+.link{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.main{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 1em;
+}
+
+.list{
+width: 90%;
+height: 100px;
+overflow: auto;
+border: 1px dotted var(--font);
+padding: 0.5em;
+}
+
+.theme-toggle {
+all: unset;
+position: fixed;
+top: 10px; right: 10px;
+color: var(--font);
+padding: 0.2em;
+font-weight: bold;
+border: 1px dotted var(--font);
+cursor: crosshair;
+z-index: 1000;
+}
+body.black .theme-toggle {
+color: var(--font);
+border-color: var(--font);
+}
+
+
+
+@media (max-width:800px){
+
+.link{
+width: 95%;
+}
+
+.main{
+width: 95%;
+}
+
+.list{
+width: 95%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+ <button id="theme-toggle" class="theme-toggle">dark theme</button>
+
+   <script>
+    /* === this is the script for the colour change! Put it before you close the </body> === */
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(t) {
+      document.body.classList.remove('light','dark');
+      document.body.classList.add(t);
+      localStorage.setItem('theme', t);
+      /* === here u can change the emoji or writing that appears on the button === */
+     btn.textContent = t === 'dark' ? 'dark' : 'light';
+    }
+
+    if (saved === 'light' || saved === 'dark') {
+      setTheme(saved);
+    } else {
+      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(dark ? 'dark' : 'light');
+    }
+
+    btn.addEventListener('click', () => {
+      const current = document.body.classList.contains('dark') ? 'dark' : 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+  
+<div class="link">
+<img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/66c.gif" width="50%" style="-webkit-mask-image: url(https://i.ibb.co/JjDXBPr/ED5929-CE-1-D66-4-EC4-8-F8-A-14792-D8-F2384.png);-webkit-mask-size: 100%;-webkit-mask-repeat: no-repeat;border-radius: 1px;-webkit-mask-position: center;     
+    ">
+<br>
+<h2 style="margin-bottom:0px;margin-top:-40px;margin-left:40%;color:#427AA1">L'assenzio</h2>
+<a href="/index.html">Inizio</a> <a href="/webmaster.html">webmaster</a> <a href="/">sito</a> <a href="/">scrittoio</a> <a href="/">studio</a> <a href="/">media</a> <a href="/">shrines</a> <a href="/">links</a> <a href="/">guestbook </a>
+
+<br><br>
+<a href="/">Yume</a> . <a href="/webmaster.html">Webmaster</a>
+</div>
+
+<div class="main">
+
+<h2 style="color:#427AA1;margin-bottom:0px">Fannish behaviour ⋆˚꩜｡</h2>
+Fin dalla mia prima esperienza nei fandom, <b>sono sempre stato più un lurker</b>, che uno che participa attivamente.
+<br>
+Ci sono stati dei periodi in cui partecipavo "attivamente" in fandom in cui stavo: avevo un account dedicato ai miei terribili Creepypasta's OC, ho postato qualche volta su un forum dedicato alle <a href="https://onepiecelove.forumcommunity.net/">ship di One Piece</a>, ho postato due o tre fan-art nel mio vecchio account di instagram, postavo commenti unfunny su wattpad e partecipavo a GDR di Danganronpa.
+<br><br>
+Il motivo principale del perchè non partecipo attivamente nei fandom è semplice: sono molto timido, punto uno. Punto due e che <b>ultimamente molta gente presente nelle community mi stanno sul cazzo</b>, quindi mi tengo alla larga.
+<br><br>
+Oramai preferisco tenermi fan-art, vari headcanon e OCs per me stesso, condivendoli solamente con i miei amici.
+<br><br>
+In termini di content, non fatti da me, mi piacionno: fan-art, edits, fanfictions e threads dove parlano dei miei personaggi preferiti.
+
+<h2 style="color:#427AA1;margin-bottom:0px">Shipping behaviour ⋆˚꩜｡</h2>
+<h3 style="color:#427AA1;margin-bottom:0px">In dettaglio:</h3>
+Le ships per me sono un altro modo per analizzare i comportamenti e la mente di dei personaggi coinvolti: trovo affascinante esplorare la loro psicologia e il loro rapporto che cambia con il tempo.
+<br>
+Amo esplorare vari scenari, studiare come si potrebberò muovere e agire.
+<br>
+Non per nulla, le mie ship dynamics preferite sono tra personaggi: mentalmente esausti/instabili, che si odiano o hanno una forte rivalità, tossici tra di loro, e così via.
+<br><br>
+<b>Ma</b> (si c'è un ma), entrambe le parti devono essere tossici allo stesso livello: non amo le coppie abuser x victim, adult x minor, le ship incesto e affini: c'è una disparità di potere troppo alta per i miei guesti.
+<br>
+(Inoltre faccio fatica a shippare coppie etero con questa tipologia di dinamica.)
+
+
+<h3 style="color:#427AA1;margin-bottom:0px">In sintesi:</h3>
+Storie che studiano le relazione tra i personaggi, angst and fluff, hurt/comfort e hurt/no comfort, happy e bittersweets endings, BL/GL/HL; what if? scenarios, toxic/doomed yaoi/yuri e la sovversione dei tropes.
+
+<h3 style="color:#427AA1;margin-bottom:0px">Tipolgia di shipper:</h3>
+Preciso immediatamente: non mi considero né un anti, né un proshipper e label affini.
+<br>
+<b>Odio con tutto il cuore</b> questa guerra infinita tra queste due categorie, la maggior parte della gente che nè prende parte è troppo arrogante e bambinesca per i miei guesti.
+<br>
+Quindi, gradirei che non mi mettiate in nessuno di questi label, grazie :3
+<br><br>
+Tornando alle cose positive, mi considero un multishipper e un rareshipper
+
+
+
+<br><br>
+
+</div>
+
+</body>
+
+</html>
