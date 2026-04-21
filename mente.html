@@ -3,55 +3,128 @@
 <head>
     
 <meta charset="utf8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La mente</title>
+<meta name="viewport" content="width=device-width, initial scale=1">
+<title>Tutto (quasi) su di me</title>
+<link rel="shortcut icon" href="/">
+
 
 <style>
 
-@font-face{
-font-family: "ronda";
-src: url('https://dl.dropboxusercontent.com/s/3o8sko3vhq0nce3/pf_ronda_seven.ttf?dl=0'); 
-format("truetype");
+@font-face {
+  font-family: 'webfont';
+  src: url(https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/000webfont.ttf);
 }
 
+:root, body.light{
+--color: #fff;
+--font: #000;
+}
+
+body.dark{
+--color: #000;
+--font: #fff;
+}
+
+
 a{
-color: #EF233C;
-text-decoration: underline;
+color: #679436;
+text-decoration: none;
 }
 
 a:hover{
-color: #D80032;
-text-decoration: underline;
+color:#679436;
+text-decoration: underline dotted;
+cursor: crosshair;
 }
 
 a:visited{
-color: #EF233C;
-text-decoration: underline;
+color:#679436;
 }
+
+i, b{
+color: #da2c38;
+}
+
+u{
+color: #da2c38;
+text-decoration: underline dotted;
+}
+
+::selection{
+background: #427AA1;
+color: #fff;
+}
+
+[id] {
+	display: none;
+}
+[id]:target {
+  display:block;
+}
+
+
 
 body{
-background: #EDF2F4;
-color: #2B2D42;
-font-family: ronda;
-font-size: 0.7em;
+background: var(--color);
+color: var(--font);
+font-family: 'webfont';
+font-size: 1.2em;
 }
 
-.corpo{
+.link{
 width: 40%;
+margin-left: auto;
 margin-right: auto;
+text-align: center;
 }
 
-@media (max-width: 800px) {
-
-  .corpo{
-	width: 95%;
-	margin-right: auto;
-  } 
- 
+.main{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 1em;
 }
 
-img{
-filter: none;
+.list{
+width: 90%;
+height: 100px;
+overflow: auto;
+border: 1px dotted var(--font);
+padding: 0.5em;
+}
+
+.theme-toggle {
+all: unset;
+position: fixed;
+top: 10px; right: 10px;
+color: var(--font);
+padding: 0.2em;
+font-weight: bold;
+border: 1px dotted var(--font);
+cursor: crosshair;
+z-index: 1000;
+}
+body.black .theme-toggle {
+color: var(--font);
+border-color: var(--font);
+}
+
+
+
+@media (max-width:800px){
+
+.link{
+width: 95%;
+}
+
+.main{
+width: 95%;
+}
+
+.list{
+width: 95%;
+}
+
 }
 
 </style>
@@ -60,30 +133,146 @@ filter: none;
 
 <body>
 
-<div class="corpo">
-    
+ <button id="theme-toggle" class="theme-toggle">dark theme</button>
 
-<div style="text-align: auto;">
-<select onchange="location=this.options[this.selectedIndex].value;" style="width:100px;font-family:ronda;font-size:0.9em;background:white;padding:3px;border:1px solid #2B2D42;border-radius: 5px;color: #2B2D42;margin-top: 0px;">
-<option value="/mente">La mente</option>
-<option value="/frontale">Lobo frontale</option>
-<option value="/temporale">Lobo temporale</option>
-<option value="/Occipitale">Lobo occipitale</option>
-</select>
+   <script>
+    /* === this is the script for the colour change! Put it before you close the </body> === */
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(t) {
+      document.body.classList.remove('light','dark');
+      document.body.classList.add(t);
+      localStorage.setItem('theme', t);
+      /* === here u can change the emoji or writing that appears on the button === */
+     btn.textContent = t === 'dark' ? 'dark' : 'light';
+    }
+
+    if (saved === 'light' || saved === 'dark') {
+      setTheme(saved);
+    } else {
+      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(dark ? 'dark' : 'light');
+    }
+
+    btn.addEventListener('click', () => {
+      const current = document.body.classList.contains('dark') ? 'dark' : 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+  
+<div class="link">
+<img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/1dc.gif" width="50%" style="-webkit-mask-image: url(https://i.ibb.co/JjDXBPr/ED5929-CE-1-D66-4-EC4-8-F8-A-14792-D8-F2384.png);-webkit-mask-size: 100%;-webkit-mask-repeat: no-repeat;border-radius: 1px;-webkit-mask-position: center;     
+    ">
+<br>
+<h2 style="margin-bottom:0px;margin-top:-40px;margin-left:40%;color:#427AA1">L'assenzio</h2>
+<a href="/index">Inizio</a> <a href="/webmaster">webmaster</a> <a href="/">sito</a> <a href="/">scrittoio</a> <a href="/">studio</a> <a href="/">media</a> <a href="/">shrines</a> <a href="/">links</a> <a href="/">guestbook </a>
+
+<br><br>
+<a href="/">Yume</a> . <a href="">Fanboy</a>
 </div>
 
-    
-<img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/e4d.png" style="float:right" width="30%">
- 
-Puoi chiamarmi Assenzio, sono un giovane adulto di 22 anni.
-<br>
-Artista e editor, uso sia i pronomi maschili che quelli neutrali.
-<br>
-Amo fantasticare, dormire e passare il mio tempo libero rilassandomi.
-<br>
-Vedetemi come uno spettro o un gatto, un entità fittizia che non esiste nel mondo reale.
+<div class="main">
+
+<h2 style="color:#427AA1;margin-bottom:0px">Il webmaster ⋆˚꩜｡</h2>
+
+Non sono molto bravo a descrivermi, è gia tanto se riesco a capire qualcosa di me stesso. Ci proverò comunque...
 <br><br>
-<a href="/index">indietro →</a>
+Mi potete chiamare Assenzio o Gin, ho 22 anni e uso principalmente <a href="https://pronouns.cc/@assenzio">i pronomi maschili</a>.
+<br>
+Vivo da qualche parte in Italia, frequento una scuola di cinema e provo a vivere come un adulto, anche se mi sembra di non esserlo.
+<br><br>
+Sono abbastanza timido e solitario, faccio fatica a fare nuove amicizie e di solito mi lego solamente a gente che ha i miei stessi interessi.
+<br>
+Mi ritrovo spesso perso nei miei pensieri, e molto spesso mi conduce al navigare per ore su internet, scuriosando in giro in questo mare di codici.
+<br><br>
+
+<div class="list">
+<i>Cose che mi piacciono:</i> i dolci, i vestiti larghi, le mezze stagioni, qualsiasi cosa che sia carino, la quiete, la pioggia
+<br>
+<i>Cose che non mi piacciono:</i> gli insetti, rospi/rane, quando fa troppo caldo o troppo freddo, i rumori forti.
+<br>
+<i>Hobbies:</i> disegnare, coding, gaming, dormire, escursionismo, navigare per l'internet
+<br>
+<i>Musica:</i> Ascolto un po' di tutto, ma ultimamente ascolto molto la new wave e il rock
+<br>
+<i>Animali:</i> gatti, foche, volpi, conigli
+<br>
+<i>Tv tropes:</i> <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/IntrovertedCatPerson">Introverted Cat Person</a>, <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/Geek">Geek</a>, <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/CovertPervert">Covert Pervert</a>, <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/PickyEater">Picky eater</a>, <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/AttentionDeficitOohShiny">Attention Deficit, Ooh, Shiny!</a>, <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/InVinoVeritas"> In Vino Veritas</a>
+</div>
+
+<br>
+
+<a href="#interests">Interessi</a> . <a href="#internet">Internet</a> . <a href="#mecore">Mecore</a>
+
+
+<div id="interests">
+<h3 style="color:#427AA1;margin-bottom:0px">Fandom</h3>
+<u>Vocaloid/Utau</u>, <u>Dandy's world</u>, NSO, Vargskelethor, PRSK + others
+
+<br>
+
+<h3 style="color:#427AA1;margin-bottom:0px">Preservazione dei media</h3>
+Lost media, archiviazione, qualsiasi cosa che centri con la ricerca e il salvataggio di media sconosciuti o che sono stati andati persi.
+<br>
+Vorrei anche avvicinarmi al mondo del restauro, sopratutto se c'entra con il cinema.
+
+<h3 style="color:#427AA1;margin-bottom:0px">Cinema</h3>
+Un po scontato visto che studio cinema.
+<br>
+è abbastanza facile per me piacermi qualcosa, ma se proprio devo decidere una tipologia, andrei per qualsiasi tipo di film che parla della mente umana.
+<br>
+Il mio regista preferito è Satoshi Kon, con Ingmar Bergman che sta pian piano entrando nella mia mente.
+
+<h3 style="color:#427AA1;margin-bottom:0px">Altri interessi generali</h3>
+Non sarò un esperto, però mi piace leggere e/o guardare video riguardanti questi temi.
+<br>
+Misteri irrisolti, crimini e omicidi, storie di siti/giochi online dimenticati, il genere denpa
+
+
+</div>
+
+
+<div id="internet">
+<h3 style="color:#427AA1;margin-bottom:0px">Cliques</h3>
+Neko<a href="https://musictelevision.neocities.org/widgets/textcliques" class="clique-link">mimi</a>
+</div>
+
+<div id="mecore">
+<h3 style="color:#427AA1;margin-bottom:0px">Personaggi</h3>
+Alcuni scelti da me personalmente, altri dati da amici o quiz.
+<br>
+<a href="https://www.sekaipedia.org/wiki/Yoisaki_Kanade"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/kanade%20yoisaki" title="Yoisaki Kanade" width="15%"></a>
+<a href="https://www.sekaipedia.org/wiki/Asahina_Mafuyu"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/mafuyu%20asahina" title="Asahina Mafuyu"  width="15%"></a>
+<a href="https://www.sekaipedia.org/wiki/Shinonome_Ena"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/ena%20shinonome" title="Shinonome Ena"  width="15%"></a>
+<a href="https://www.sekaipedia.org/wiki/Akiyama_Mizuki"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/Mizuki%20akiyama" title="Akiyama Mizuki"  width="15%"></a>
+<a href="https://www.sekaipedia.org/wiki/Tenma_Tsukasa"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/temna%20tsukasa.png" title="Tenma Tsukasa" width="15%"></a>
+<a href="https://www.sekaipedia.org/wiki/Kusanagi_Nene"><img src="https://file.garden/aP5vCKAZw0hKw66q/Neocities/nene.png" title="Nene Kusanagi" width="15%"></a>
+
+<a href="https://d4dj.fandom.com/wiki/Shiratori_Kurumi"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/kuromi" title="Shiratori Kurumi" width="15%"></a>
+<a href="https://d4dj.fandom.com/wiki/Fukushima_Noa"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/noa" title="Fukushima Noa" width="15%"></a>
+
+<a href="https://bandori.miraheze.org/wiki/Maruyama_Aya"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/aya" title="Maruyama Aya" width="15%"></a>
+<a href="https://bandori.miraheze.org/wiki/Ushigome_Rimi"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/rimi" title="Ushigome Rimi" width="15%"></a>
+
+<a href="https://alienstage.fandom.com/wiki/Luka"><img src="https://file.garden/aJJVPUa3yQqsHRx2/luka" title="Luka" width="15%"></a>
+<a href="https://alienstage.fandom.com/wiki/Luka"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/sua" title="Sua" width="15%"></a>
+
+<a href="https://umamusu.wiki/Seiun_Sky"><img src="https://file.garden/aJJVPUa3yQqsHRx2/seiunsky.png" title="Seiun Sky" width="15%"></a>
+<a href="https://umamusu.wiki/Agnes_Digital"><img src="https://file.garden/aP5vCKAZw0hKw66q/Neocities/agnes.png" title="Agnes Digital" width="15%"></a>
+<a href="https://umamusu.wiki/Sweep_Tosho"><img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/dc6.png" title="Sweep Tosho" width="15%"></a>
+
+<a href="https://dandys-world-robloxhorror.fandom.com/wiki/Cosmo"><img src="https://file.garden/aJJVPUa3yQqsHRx2/cosmo.png" title="Cosmo, art by rebzibites on pinterest" width="15%"></a>
+<a href="https://battlefordreamisland.fandom.com/wiki/Bubble"><img src="https://file.garden/aJJVPUa3yQqsHRx2/bubble" title="Bubble" width="15%"></a>
+<a href="https://regretevator.fandom.com/wiki/Gregoriah"><img src="https://file.garden/aJJVPUa3yQqsHRx2/Neocities/gregoriah" title="Gregoriah" width="15%"></a>
+<a href="https://needystreameroverload.wiki.gg/wiki/Ame-chan"><img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/aa9.png" title="Ame-chan" width="15%"></a>
+
+<h3 style="color:#427AA1;margin-bottom:0px">Quiz/Test</h3>
+
+<div style="border:1px solid #999;border-radius:6px;padding:6px;font:normal 1em sans-serif;background:#fff;color:#000;min-width:200px;max-width:360px;"><style scoped>.resBarOuter {width:75%;height:15px;padding:0;margin:0;background:#eee;border:1px solid #000;text-align:left !important;position:relative;} .resBarInner {text-indent:-9999px;height:15px;background:#d02;font-size:6px;line-height:6px;margin:0;padding:0;position:relative;background-image:linear-gradient(bottom,rgb(221,0,33) 40%,rgb(255,60,86) 74%,rgb(221,0,33) 100%);background-image:-moz-linear-gradient(bottom,rgb(221,0,33) 40%,rgb(255,60,86) 74%,rgb(221,0,33) 100%);background-image:-webkit-linear-gradient(bottom,rgb(221,0,33) 40%,rgb(255,60,86) 74%,rgb(221,0,33) 100%);background-image:-ms-linear-gradient(bottom,rgb(221,0,33) 40%,rgb(255,60,86) 74%,rgb(221,0,33) 100%);} .resBarM {width:35%;float:right;margin-right: 10px;} .resRow {color:#000;background:#fff;clear:both;margin: 5px 0;}}</style><div style="color:#000;font:bold 1.2em sans-serif;margin:0 0 8px 0;">What paranormal creature are you most like?</div><div style="font:bold 1.2em sans-serif;margin:0 0 4px 0;">Your Result: <strong>Classic Vampire</strong></div><div class="resBarOuter"><div class="resBarInner" style="width:86%;">&nbsp;</div></div><div style="margin:10px 0 4px;border:none;background:#fff;color:#000;">You loathe the sun and dwell in the night, darkness is your comfort. You can be devious, and can manipulate others with ease. You can get on the good side of others using your sly ability to please. And you certainly DO NOT sparkle </div><div class="resRow"><div class="resBarOuter resBarM"><div class="resBarInner" style="width:70%;">&nbsp;</div></div>Angel</div><div class="resRow"><div class="resBarOuter resBarM"><div class="resBarInner" style="width:63%;">&nbsp;</div></div>"Classic" Werewolf</div><div class="resRow"><div class="resBarOuter resBarM"><div class="resBarInner" style="width:54%;">&nbsp;</div></div>Demon</div><div class="resRow"><div class="resBarOuter resBarM"><div class="resBarInner" style="width:45%;">&nbsp;</div></div>"Twilight" Vampire</div><div class="resRow"><div class="resBarOuter resBarM"><div class="resBarInner" style="width:39%;">&nbsp;</div></div>Mermaid</div><div class="resRow"><div class="resBarOuter resBarM"><div class="resBarInner" style="width:36%;">&nbsp;</div></div>"Twilight" Werewolf</div><div><a style="color: #00f;" href="https://www.gotoquiz.com/what_paranormal_creature_are_you_most_like"><strong>What paranormal creature are you most like?</strong></a></div></div>
+
+</div>
+
 
 </div>
 
