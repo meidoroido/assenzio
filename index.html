@@ -14,37 +14,44 @@
   src: url(https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/000webfont.ttf);
 }
 
-:root, body.light{
+:root, body.❀{
 --color: #fff;
 --font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
 }
 
-body.dark{
+body.✿{
 --color: #000;
 --font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
 }
 
 
 a{
-color: #679436;
+color: var(--link);
 text-decoration: none;
 }
 
 a:hover{
-color:#679436;
+color: var(--link);
 text-decoration: underline dotted;
 cursor: crosshair;
 }
 
 a:visited{
-color:#679436;
+color: var(--link);
 }
 
 ::selection{
-background: #427AA1;
+background: #00b4d8;
 color: #fff;
 }
 
+h2{
+color: var(--h2)
+}
 
 
 body{
@@ -72,16 +79,16 @@ margin-top: 1em;
 all: unset;
 position: fixed;
 top: 10px; right: 10px;
-color: var(--font);
+color: var(--link);
 padding: 0.2em;
 font-weight: bold;
-border: 1px dotted var(--font);
+border: 1px dotted var(--link);
 cursor: crosshair;
 z-index: 1000;
 }
-body.black .theme-toggle {
-color: var(--font);
-border-color: var(--font);
+body.✿ .theme-toggle {
+color: var(--link);
+border-color: var(--link);
 }
     
     
@@ -112,23 +119,23 @@ width: 95%;
     const saved = localStorage.getItem('theme');
 
     function setTheme(t) {
-      document.body.classList.remove('light','dark');
+      document.body.classList.remove('❀','✿');
       document.body.classList.add(t);
       localStorage.setItem('theme', t);
       /* === here u can change the emoji or writing that appears on the button === */
-     btn.textContent = t === 'dark' ? 'dark' : 'light';
+     btn.textContent = t === '✿' ? '✿' : '❀';
     }
 
-    if (saved === 'light' || saved === 'dark') {
+    if (saved === '❀' || saved === '✿') {
       setTheme(saved);
     } else {
-      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(dark ? 'dark' : 'light');
+      const dark = window.matchMedia('(prefers-color-scheme: ✿)').matches;
+      setTheme(dark ? '✿' : '❀');
     }
 
     btn.addEventListener('click', () => {
-      const current = document.body.classList.contains('dark') ? 'dark' : 'light';
-      setTheme(current === 'dark' ? 'light' : 'dark');
+      const current = document.body.classList.contains('✿') ? '✿' : '❀';
+      setTheme(current === '✿' ? '❀' : '✿');
     });
   </script>
 
@@ -136,12 +143,12 @@ width: 95%;
 <img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/89d.gif" width="50%" style="-webkit-mask-image: url(https://i.ibb.co/JjDXBPr/ED5929-CE-1-D66-4-EC4-8-F8-A-14792-D8-F2384.png);-webkit-mask-size: 100%;-webkit-mask-repeat: no-repeat;border-radius: 1px;-webkit-mask-position: center;     
     ">
 <br>
-<h2 style="margin-bottom:0px;margin-top:-40px;margin-left:40%;color:#427AA1">L'assenzio</h2>
+<h2 style="margin-bottom:0px;margin-top:-40px;margin-left:40%;">L'assenzio</h2>
 <a href="/index.html">Inizio</a> <a href="/webmaster.html">webmaster</a> <a href="/">sito</a> <a href="/">scrittoio</a> <a href="/">studio</a> <a href="/">media</a> <a href="/">shrines</a> <a href="/">links</a> <a href="/">guestbook </a>
 </div>
 
 <div class="main">
-<h2 style="color:#427AA1;margin-bottom:0px">Benvenut* ⋆˚꩜｡</h2>
+<h2 style="margin-bottom:0px">Benvenut* ⋆˚꩜｡</h2>
 Voglio darti il benvenuto nella mia cantina persona, il mio posto preferito dove mettere i miei pensieri e archiviare qualsiasi cosa relativa a me stesso.
 <br>
 Un posto dove posso rifugiarmi, lontano dai social media moderni.
