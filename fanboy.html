@@ -11,49 +11,53 @@
 
 <style>
 
-@font-face {
-  font-family: 'webfont';
-  src: url(https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/000webfont.ttf);
-}
-
-:root, body.light{
+:root, body.❀{
 --color: #fff;
 --font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+--h3: #00b4d8;
 }
 
-body.dark{
+body.✿{
 --color: #000;
 --font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+--h3: #90e0ef;
 }
 
 
 a{
-color: #679436;
+color: var(--link);
 text-decoration: none;
 }
 
 a:hover{
-color:#679436;
+color: var(--link);
 text-decoration: underline dotted;
 cursor: crosshair;
 }
 
 a:visited{
-color:#679436;
-}
-
-i, b{
-color: #da2c38;
-}
-
-u{
-color: #da2c38;
-text-decoration: underline dotted;
+color: var(--link);
 }
 
 ::selection{
-background: #427AA1;
+background: #00b4d8;
 color: #fff;
+}
+
+h2{
+color: var(--h2)
+}
+
+h3{
+color: var(--h3)
+}
+
+b, i{
+color: #e5383b;
 }
 
 [id] {
@@ -68,8 +72,7 @@ color: #fff;
 body{
 background: var(--color);
 color: var(--font);
-font-family: 'webfont';
-font-size: 1.2em;
+font-size: 1em;
 }
 
 .link{
@@ -98,16 +101,16 @@ padding: 0.5em;
 all: unset;
 position: fixed;
 top: 10px; right: 10px;
-color: var(--font);
+color: var(--link);
 padding: 0.2em;
 font-weight: bold;
-border: 1px dotted var(--font);
+border: 1px dotted var(--link);
 cursor: crosshair;
 z-index: 1000;
 }
-body.black .theme-toggle {
-color: var(--font);
-border-color: var(--font);
+body.✿ .theme-toggle {
+color: var(--link);
+border-color: var(--link);
 }
 
 
@@ -142,23 +145,23 @@ width: 95%;
     const saved = localStorage.getItem('theme');
 
     function setTheme(t) {
-      document.body.classList.remove('light','dark');
+      document.body.classList.remove('❀','✿');
       document.body.classList.add(t);
       localStorage.setItem('theme', t);
       /* === here u can change the emoji or writing that appears on the button === */
-     btn.textContent = t === 'dark' ? 'dark' : 'light';
+     btn.textContent = t === '✿' ? '✿' : '❀';
     }
 
-    if (saved === 'light' || saved === 'dark') {
+    if (saved === '❀' || saved === '✿') {
       setTheme(saved);
     } else {
-      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(dark ? 'dark' : 'light');
+      const dark = window.matchMedia('(prefers-color-scheme: ✿)').matches;
+      setTheme(dark ? '✿' : '❀');
     }
 
     btn.addEventListener('click', () => {
-      const current = document.body.classList.contains('dark') ? 'dark' : 'light';
-      setTheme(current === 'dark' ? 'light' : 'dark');
+      const current = document.body.classList.contains('✿') ? '✿' : '❀';
+      setTheme(current === '✿' ? '❀' : '✿');
     });
   </script>
   
@@ -166,7 +169,7 @@ width: 95%;
 <img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/66c.gif" width="50%" style="-webkit-mask-image: url(https://i.ibb.co/JjDXBPr/ED5929-CE-1-D66-4-EC4-8-F8-A-14792-D8-F2384.png);-webkit-mask-size: 100%;-webkit-mask-repeat: no-repeat;border-radius: 1px;-webkit-mask-position: center;     
     ">
 <br>
-<h2 style="margin-bottom:0px;margin-top:-40px;margin-left:40%;color:#427AA1">L'assenzio</h2>
+<h2 style="margin-bottom:0px;margin-top:-30px;margin-left:40%;color:#427AA1">L'assenzio</h2>
 <a href="/index.html">Inizio</a> <a href="/webmaster.html">webmaster</a> <a href="/">sito</a> <a href="/">scrittoio</a> <a href="/">studio</a> <a href="/">media</a> <a href="/">shrines</a> <a href="/">links</a> <a href="/">guestbook </a>
 
 <br><br>
@@ -175,43 +178,86 @@ width: 95%;
 
 <div class="main">
 
-<h2 style="color:#427AA1;margin-bottom:0px">Fannish behaviour ⋆˚꩜｡</h2>
-Fin dalla mia prima esperienza nei fandom, <b>sono sempre stato più un lurker</b>, che uno che participa attivamente.
+<h2 style="margin-bottom:0px">Fannish behaviour ⋆˚꩜｡</h2>
+Fin dalla mie prime esperienza nei fandom, <b>sono sempre stato più un lurker</b>, che uno che participa attivamente.
 <br>
-Ci sono stati dei periodi in cui partecipavo "attivamente" in fandom in cui stavo: avevo un account dedicato ai miei terribili Creepypasta's OC, ho postato qualche volta su un forum dedicato alle <a href="https://onepiecelove.forumcommunity.net/">ship di One Piece</a>, ho postato due o tre fan-art nel mio vecchio account di instagram, postavo commenti unfunny su wattpad e partecipavo a GDR di Danganronpa.
+Ci sono stati dei periodi in cui partecipavo "attivamente" in fandom in cui stavo: avevo un account dedicato ai miei terribili Creepypasta's OC, ho postato qualche volta su un forum dedicato alle <a href="https://onepiecelove.forumcommunity.net/">ship di One Piece</a>, ho postato due o tre fan-art nel mio vecchio account di instagram e partecipavo a GDR di Danganronpa.
 <br><br>
-Il motivo principale del perchè non partecipo attivamente nei fandom è semplice: sono molto timido, punto uno. Punto due e che <b>ultimamente molta gente presente nelle community mi stanno sul cazzo</b>, quindi mi tengo alla larga.
+Il motivo principale del perchè non partecipo attivamente nei fandom è semplice: sono molto timido, punto uno. Punto due e che <b> molta gente presente nelle community mi stanno sul cazzo</b>, quindi mi tengo alla larga.
 <br><br>
 Oramai preferisco tenermi fan-art, vari headcanon e OCs per me stesso, condivendoli solamente con i miei amici.
 <br><br>
 In termini di content, non fatti da me, mi piacionno: fan-art, edits, fanfictions e threads dove parlano dei miei personaggi preferiti.
 
-<h2 style="color:#427AA1;margin-bottom:0px">Shipping behaviour ⋆˚꩜｡</h2>
-<h3 style="color:#427AA1;margin-bottom:0px">In dettaglio:</h3>
-Le ships per me sono un altro modo per analizzare i comportamenti e la mente di dei personaggi coinvolti: trovo affascinante esplorare la loro psicologia e il loro rapporto che cambia con il tempo.
+<h2 style="margin-bottom:0px">Shipping behaviour ⋆˚꩜｡</h2>
+<h3 style="margin-bottom:0px">In dettaglio:</h3>
+Le ship per me sono un altro modo per analizzare i comportamenti e la mente di dei personaggi coinvolti: trovo affascinante esplorare la loro psicologia e il rapporto che cambia con il tempo.
 <br>
-Amo esplorare vari scenari, studiare come si potrebberò muovere e agire.
+Amo esplorare vari scenari, e studiare come si potrebberò muovere e agire.
 <br>
 Non per nulla, le mie ship dynamics preferite sono tra personaggi: mentalmente esausti/instabili, che si odiano o hanno una forte rivalità, tossici tra di loro, e così via.
 <br><br>
-<b>Ma</b> (si c'è un ma), entrambe le parti devono essere tossici allo stesso livello: non amo le coppie abuser x victim, adult x minor, le ship incesto e affini: c'è una disparità di potere troppo alta per i miei guesti.
+<b>Ma</b> (si c'è un ma), entrambe le parti devono essere tossici allo stesso livello: non amo le coppie abuser x victim, adult x minor, le ship incesto e affini. C'è una disparità di potere troppo alta per i miei guesti.
 <br>
-(Inoltre faccio fatica a shippare coppie etero con questa tipologia di dinamica.)
+<i>(Inoltre faccio fatica a shippare coppie etero con questa tipologia di dinamica.)</i>
 
 
-<h3 style="color:#427AA1;margin-bottom:0px">In sintesi:</h3>
-Storie che studiano le relazione tra i personaggi, angst and fluff, hurt/comfort e hurt/no comfort, happy e bittersweets endings, BL/GL/HL; what if? scenarios, toxic/doomed yaoi/yuri e la sovversione dei tropes.
+<h3 style="margin-bottom:0px">In sintesi:</h3>
+Storie che studiano le relazione tra i personaggi, angst and fluff, hurt/comfort e hurt/no comfort, happy e bittersweets endings, BL/GL/HL; what if? scenarios e toxic/doomed yaoi/yuri.
 
-<h3 style="color:#427AA1;margin-bottom:0px">Tipolgia di shipper:</h3>
-Preciso immediatamente: non mi considero né un anti, né un proshipper e label affini.
+<h3 style="margin-bottom:0px">Tipolgia di shipper:</h3>
+<i>(Preciso immediatamente: non mi considero né un anti, né un proshipper e label affini.)</i>
 <br>
-<b>Odio con tutto il cuore</b> questa guerra infinita tra queste due categorie, la maggior parte della gente che nè prende parte è troppo arrogante e bambinesca per i miei guesti.
+Mi considero un multishipper e un rareshipper: mi capita spesso shippare un personaggio con più persone contemporaneamente, fregandomene se hanno interagito o meno, ma ho sempre una sola ship che sta nella mia mente 24/24. 
 <br>
-Quindi, gradirei che non mi mettiate in nessuno di questi label, grazie :3
+L'unica cosa che conta per me, come ho spiegato prima, e la dinamica tra i due.
 <br><br>
-Tornando alle cose positive, mi considero un multishipper e un rareshipper
+il 99% delle coppie che shippo non ha una dinamica fissa e nel 1% in cui e il contrario, la dinamica opposta non è <i>(quasi)</i> mai una landmine.
 
+<h3 style="margin-bottom:0px">Landimes:</h3>
+<b>Nonostante ciò</b>, ho i miei pet peeves, sia in campo dei tropes, che nel campo delle ship.
 
+<br><br>
+<b><i>Tropes, generi, etc.</i></b>
+<ul>
+<li>wip </li>
+</ul>
+
+<b><i>Ship/Dinamiche</i></b>
+<ul>
+<li>Ruikasa/Kasarui<a href="https://shipping.fandom.com/wiki/RuiKasa">*</a> (eccetto quando sono <a href="https://shipping.fandom.com/wiki/Polyshow">in una ship poli</a>)</li>
+<li>Kaochisa/Chisakao<a href="https://shipping.fandom.com/wiki/Kaochisa">*</a></li>
+<li>Kobymeppo (fa così cagare sta ship che non ha una pagina tutta sua)</li>
+<li>Top!Rodger (mi fa strano avere una dinamica fissa per un personaggio Roblox)</li> 
+</ul>
+
+<h3>Lista di ship:</h3>
+Una lista (non completa) di ship che amo/adoro e che ho amato.
+<br>
+L'ordine delle ship non ha importanza a meno che non sono sottolineate.
+<br><br>
+<b>Ship che adoro</b>
+<ul>
+<li><u>Dyle/Goob/Glisten/Dandy x Rodger</u> <i>(Dandy's world)</i></li>
+<li>Cocoa x Bassie <i>(Dandy's world)</i></li>
+<li><u>Daroach x Magolor</u> <i>(Kirby)</i></li>
+<li>Daroach x Meta Knight <i>(Kirby)</i></li>
+<li>Sanji x Usopp <i>(One piece)</i></li>
+<li>Iku x Miku <i>(Vocal synths)</i></li>
+<li>Iku x Gekiyaku <i>(Vocal synths)</i></li>
+<li>Mayu x Lumi <i>(Vocal synths)</i></li>
+<li>Luka x Kaito <i>(Vocal synths)</i></li>
+</ul>
+
+<b>Ship che ho amato</b>
+<br>
+Ship che ora non mi interessano granchè (per molti motivi), ma che sono state importanti per me.
+<br>
+Alcune di queste ship
+<ul>
+<li>Bonnie x Chica <i>(FNAF)</i></li>
+<li>Foxy x Mangle <i>(FNAF)</i></li>
+</ul>
 
 <br><br>
 
