@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial scale=1">
+<title>Links</title>
+<link rel="shortcut icon" href="/">
+
+<style>
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+--h3: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+--h3: #90e0ef;
+}
+
+
+a{
+color: var(--link);
+text-decoration: none;
+}
+
+a:hover{
+color: var(--link);
+text-decoration: underline dotted;
+cursor: crosshair;
+}
+
+a:visited{
+color: var(--link);
+}
+
+::selection{
+background: #00b4d8;
+color: #fff;
+}
+
+h2{
+color: var(--h2)
+}
+
+h3{
+color: var(--h3)
+}
+
+b, i{
+color: #e5383b;
+}
+
+[id] {
+	display: none;
+}
+[id]:target {
+  display:block;
+}
+
+
+
+body{
+background: var(--color);
+color: var(--font);
+font-size: 1em;
+}
+
+.link{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.main{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 1em;
+}
+
+
+
+.theme-toggle {
+all: unset;
+position: fixed;
+top: 10px; right: 10px;
+color: var(--link);
+padding: 0.2em;
+font-weight: bold;
+border: 1px dotted var(--link);
+cursor: crosshair;
+z-index: 1000;
+}
+body.✿ .theme-toggle {
+color: var(--link);
+border-color: var(--link);
+}
+
+
+
+@media (max-width:800px){
+
+.link{
+width: 95%;
+}
+
+.main{
+width: 95%;
+}
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+ <button id="theme-toggle" class="theme-toggle">dark theme</button>
+
+   <script>
+    /* === this is the script for the colour change! Put it before you close the </body> === */
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(t) {
+      document.body.classList.remove('❀','✿');
+      document.body.classList.add(t);
+      localStorage.setItem('theme', t);
+      /* === here u can change the emoji or writing that appears on the button === */
+     btn.textContent = t === '✿' ? '✿' : '❀';
+    }
+
+    if (saved === '❀' || saved === '✿') {
+      setTheme(saved);
+    } else {
+      const dark = window.matchMedia('(prefers-color-scheme: ✿)').matches;
+      setTheme(dark ? '✿' : '❀');
+    }
+
+    btn.addEventListener('click', () => {
+      const current = document.body.classList.contains('✿') ? '✿' : '❀';
+      setTheme(current === '✿' ? '❀' : '✿');
+    });
+  </script>
+  
+<div class="link">
+<img src="https://i.postimg.cc/TPSbS7Yy/d2b350.gif" width="50%" style="-webkit-mask-image: url(https://i.ibb.co/JjDXBPr/ED5929-CE-1-D66-4-EC4-8-F8-A-14792-D8-F2384.png);-webkit-mask-size: 100%;-webkit-mask-repeat: no-repeat;border-radius: 1px;-webkit-mask-position: center;     
+    ">
+<br>
+<h2 style="margin-bottom:0px;margin-top:-30px;margin-left:40%;color:#427AA1">L'assenzio</h2>
+<a href="/index.html">Inizio</a> <a href="/webmaster.html">Webmaster</a> <a href="/">Sito</a> <a href="/">Scrittoio</a> <a href="/">Studio</a> <a href="/">Media</a> <a href="/">Shrines</a> <a href="/">Links</a> <a href="/">Guestbook</a>
+
+</div>
+
+<div class="main">
+
+<a href="#html">HTML</a> ✧ <a href="#pirateria">Pirateria</a> ✧ <a href="#vocasynth">Vocal synth</a> ✧ <a href="#utili">Siti utili</a> ✧ <a href="#crediti">Crediti</a>
+
+
+<div id="HTML">
+
+<ul>
+<li><a href="https://www.w3schools.com/">w3schools</a>: sito perfetto per imparare HTML, CSS e altri.</li>
+</ul>
+
+
+</div>
+
+<div id="pirateria">
+
+<ul>
+<li><a href="https://www.reddit.com/r/Piracy/wiki/megathread/">r/Piracy megathread</a></li>
+<li><a href="https://rentry.org/pgames">r/Pirated Games rentry</a></li>
+</ul>
+
+</div>
+
+<div id="vocasynth">
+<ul>
+<li><a href="https://ulmteam.blogspot.com/">UTAU lost media</a>: archivio di UTAU ormai non più disponibili al pubblico o difficili da trovare.</li>
+<li><a href="https://www.vsqx.top/">vsqx.top</a>: sito cinese dedicato alla distribuzione di project files.</li>
+<li><a href="https://vocaloader.app/">Vocaloader</a>: sito simile a vsqx.top ma inglese.</li>
+</ul>
+</div>
+
+
+</div>
+
+</body>
+
+</html>
