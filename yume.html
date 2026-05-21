@@ -1,1 +1,242 @@
+ <html>
 
+<head>
+
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial scale=1">
+<title>Io come fan</title>
+<link rel="shortcut icon" href="/">
+
+
+
+<style>
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+--h3: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+--h3: #90e0ef;
+}
+
+
+a{
+color: var(--link);
+text-decoration: none;
+}
+
+a:hover{
+color: var(--link);
+text-decoration: underline dotted;
+cursor: crosshair;
+}
+
+a:visited{
+color: var(--link);
+}
+
+::selection{
+background: #00b4d8;
+color: #fff;
+}
+
+h2{
+color: var(--h2)
+}
+
+h3{
+color: var(--h3)
+}
+
+b, i{
+color: #e5383b;
+}
+
+[id] {
+	display: none;
+}
+[id]:target {
+  display:block;
+}
+
+
+
+body{
+background: var(--color);
+color: var(--font);
+font-size: 1em;
+}
+
+.link{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.main{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 1em;
+}
+
+.list{
+width: 90%;
+height: 100px;
+overflow: auto;
+border: 1px dotted var(--font);
+padding: 0.5em;
+}
+
+.lista{
+display: flex;
+flex-direction: row;
+}
+
+.lista div{
+width: auto;
+border: 1px solid var(--font);
+text-align: center;
+padding: 0.2em;
+}
+
+.theme-toggle {
+all: unset;
+position: fixed;
+top: 10px; right: 10px;
+color: var(--link);
+padding: 0.2em;
+font-weight: bold;
+border: 1px dotted var(--link);
+cursor: crosshair;
+z-index: 1000;
+}
+body.✿ .theme-toggle {
+color: var(--link);
+border-color: var(--link);
+}
+
+
+
+@media (max-width:800px){
+
+.link{
+width: 95%;
+}
+
+.main{
+width: 95%;
+}
+
+.list{
+width: 95%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+ <button id="theme-toggle" class="theme-toggle">dark theme</button>
+
+   <script>
+    /* === this is the script for the colour change! Put it before you close the </body> === */
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(t) {
+      document.body.classList.remove('❀','✿');
+      document.body.classList.add(t);
+      localStorage.setItem('theme', t);
+      /* === here u can change the emoji or writing that appears on the button === */
+     btn.textContent = t === '✿' ? '✿' : '❀';
+    }
+
+    if (saved === '❀' || saved === '✿') {
+      setTheme(saved);
+    } else {
+      const dark = window.matchMedia('(prefers-color-scheme: ✿)').matches;
+      setTheme(dark ? '✿' : '❀');
+    }
+
+    btn.addEventListener('click', () => {
+      const current = document.body.classList.contains('✿') ? '✿' : '❀';
+      setTheme(current === '✿' ? '❀' : '✿');
+    });
+  </script>
+  
+<div class="link">
+<img src="https://i.postimg.cc/BvnPYMZ6/a1eebf.gif" width="50%" style="-webkit-mask-image: url(https://i.ibb.co/JjDXBPr/ED5929-CE-1-D66-4-EC4-8-F8-A-14792-D8-F2384.png);-webkit-mask-size: 100%;-webkit-mask-repeat: no-repeat;border-radius: 1px;-webkit-mask-position: center;     
+    ">
+<br>
+<h2 style="margin-bottom:0px;margin-top:-30px;margin-left:40%;">L'assenzio</h2>
+<a href="/index.html">Inizio</a> 
+<a href="/webmaster.html">webmaster</a> 
+<font style="text-decoration: line-through;"><a href="/">sito</a></font>
+<font style="text-decoration: line-through;"><a href="/">scrittoio</a></font>
+<font style="text-decoration: line-through;"><a href="/">studio</a></font>
+<font style="text-decoration: line-through;"><a href="/">media</a></font>
+<font style="text-decoration: line-through;"><a href="/">shrines</a></font>
+<a href="/links.html">links</a> 
+<font style="text-decoration: line-through;"><a href="/">guestbook </a></font>
+<br><br>
+<a href="/fanboy.html">Fanboy</a> . <a href="/webmaster.html">Webmaster</a>
+</div>
+
+<div class="main">
+
+<h2 style="margin-bottom:0px">In generale ⋆˚꩜｡</h2>
+
+Si, ho quasi 23 anni e mi selfshippo con personaggi non reali invece che avere cotte per persone reali, ma onestamemente chissene frega lol :p
+<br>
+Inoltre uso entrambi i termini <i>selfshipper</i> e <i>yumedanshi</i> + termini affini
+<br><br>
+Comunque, una cosa che non ho menzionato nella sezione fanboy e che nei media che consumo, ho sempre un personaggio che amo alla molto o alla follia.
+<br>
+Il genere, il carattere del personaggio conta poco, guardando i miei personaggi preferiti non seguono un filone preciso: alcuni sono dei semplici sfigati, altri sono sull'orlo del suicidio, mentre altri sono semplicemente silly :3c
+<br><br>
+
+Ho cominciato a selfshipparmi "seriamente" di recente, un anno o due fa, ma già da prima mi capitava di assegnarmi come fidanzato o come parente di qualche personaggio che amavo.
+<br>
+Mi identifico come uno sharing yumedanshi, non mi danno fastidio gli altri selfshipper e apprezzo molto quando altre persone amano il mio stesso F/O.
+<br>
+Unica eccezzione per Ame-Chan, per lei sono più selettivo a causa dei fan.
+
+<h2 style="margin-bottom:0px">F/Os romantici ⋆˚꩜｡</h2>
+
+<br>
+
+<div class="lista">
+    
+<div>
+<b>Tangerine</b>
+<br>
+<img src="https://i.postimg.cc/ZYxjCYsp/tangerine.png" style="border: 1px solid var(--font);" width="150px">
+<br>
+<i>Bullet train</i>
+</div>   
+    
+</div>
+
+
+<br><br>
+
+
+
+</div>
+
+</body>
+
+</html>
