@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div id="img"></div>
 
 <div id="inbox">
-this webmaster is a <b>[sharing/nonsharing]</b> <b>[character]</b> <b>[yume/riako/etc]</b><br>
+this webmaster is a <b>sharing</b> <b>Pink</b> <b>yume</b><br>
 <a href="https://moekkis.neocities.org/yumeclique.html">join the yumeclique !</a>
 </div>
 </div>
