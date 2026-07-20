@@ -35,7 +35,7 @@ this webmaster is a <b>sharing</b> <b>Pink</b> <b>yume</b><br>
 
 .yumering #img {
     width: 90px; height: 90px;
-    background-image: url('https://files.catbox.moe/0shu1e.jpeg'); /*IMPORTANT!! REPLACE THIS WITH YOUR FAV!*/
+    background-image: url('https://file.garden/aP5vCKAZw0hKw66q/0c61.jpg'); /*IMPORTANT!! REPLACE THIS WITH YOUR FAV!*/
     border:1px solid black;
     border-radius: 2px;
     background-size:cover;
