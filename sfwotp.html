@@ -1,0 +1,282 @@
+<html>
+
+<head>
+    
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial scale=1">
+<title>OTP prompt generator</title>
+<link rel="shortcut icon" href="/">
+
+<style>
+
+@font-face {
+  font-family: 'webfont';
+  src: url(https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/000webfont.ttf);
+}
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+}
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+--h3: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+--h3: #90e0ef;
+}
+
+
+a{
+color: var(--link);
+text-decoration: none;
+}
+
+a:hover{
+color: var(--link);
+text-decoration: underline dotted;
+cursor: crosshair;
+}
+
+a:visited{
+color: var(--link);
+}
+
+::selection{
+background: #00b4d8;
+color: #fff;
+}
+
+h2{
+color: var(--h2)
+}
+
+h3{
+color: var(--h3)
+}
+
+b, i{
+color: #e5383b;
+}
+
+
+body{
+background: var(--color);
+color: var(--font);
+font-size: 1em;
+}
+
+        #main {
+            width: 400px;
+            margin: auto;
+        }
+
+        #a {
+            position: absolute;
+            border-radius: 25px;
+            border: 1px dashed var(--font);
+            margin: 200px 0px 0px 0px;
+            width: 100px;
+            padding: 0.5em;
+            font-size: 12px;
+            color: var(--font);
+            font-style: oblique;
+            text-align: center;
+        }
+
+        #b {
+            position: absolute;
+            border-radius: 25px;
+            border: 1px dashed var(--font);
+            margin: 200px 0px 0px 150px;
+            width: 100px;
+            padding: 0.5em;
+            font-size: 12px;
+            color: var(--font);
+            font-style: oblique;
+            text-align: center;
+        }
+
+        #genbutt {
+            position: absolute;
+            border-radius: 25px;
+            border: 1px dashed var(--font);
+            margin: 200px 0px 0px 300px;
+            width: 100px;
+            padding: 5px 5px 5px 5px;
+            cursor: crosshair;
+            text-align: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #genbutt:hover {
+            margin: 201px 0px 0px 301px;
+        }
+
+        #text {
+            position: absolute;
+            border-radius: 25px;
+            border: 1px dashed var(--font);
+            padding: 20px;
+            margin: 250px 0px 300px 0px;
+            width: 390px;
+        }
+
+        #premise {}
+
+        #thanks {
+            font-style: oblique;
+            float: right;
+            font-size: 12px;
+        }
+
+.theme-toggle {
+all: unset;
+position: fixed;
+top: 10px; right: 10px;
+color: var(--link);
+padding: 0.2em;
+font-weight: bold;
+border: 1px dotted var(--link);
+cursor: crosshair;
+z-index: 1000;
+}
+body.✿ .theme-toggle {
+color: var(--link);
+border-color: var(--link);
+}
+    
+    
+
+@media (max-width:800px){
+
+.link{
+width: 95%;
+}
+
+.main{
+width: 95%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+ <button id="theme-toggle" class="theme-toggle">dark theme</button>
+
+   <script>
+    /* === this is the script for the colour change! Put it before you close the </body> === */
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(t) {
+      document.body.classList.remove('❀','✿');
+      document.body.classList.add(t);
+      localStorage.setItem('theme', t);
+      /* === here u can change the emoji or writing that appears on the button === */
+     btn.textContent = t === '✿' ? '✿' : '❀';
+    }
+
+    if (saved === '❀' || saved === '✿') {
+      setTheme(saved);
+    } else {
+      const dark = window.matchMedia('(prefers-color-scheme: ✿)').matches;
+      setTheme(dark ? '✿' : '❀');
+    }
+
+    btn.addEventListener('click', () => {
+      const current = document.body.classList.contains('✿') ? '✿' : '❀';
+      setTheme(current === '✿' ? '❀' : '✿');
+    });
+  </script>
+  
+    <script type="text/javascript">
+
+        var prompts = [
+        "<strong>{B}</strong> being overwhelmed, and <strong>{A}</strong> just holding their hand as a way to ground them (or just sitting next to them in silence).",
+        "Watching the sunset/sunrise/stars together, but <strong>{A}</strong> can't keep their eyes of <strong>{B}</strong>.",
+        "Cooking together (bonus if one, or both of them can't cook).",
+        "<strong>{B}</strong> flirts with <strong>{A}</strong> but <strong>{A}</strong> has no idea how to flirt back.",
+        ]
+
+    function clear1() {
+
+        document.getElementById("a").value = "";
+        document.getElementById("a").style.fontStyle = "normal";
+    }
+
+    function clear2() {
+
+        document.getElementById("b").value = "";
+        document.getElementById("b").style.fontStyle = "normal";
+    }
+
+     function fluff() {
+
+        // Get names of OTP
+        var A = document.getElementById("a").value;
+        var B = document.getElementById("b").value;
+
+        // Get random prompt
+        var R1 = Math.floor(Math.random() * prompts.length);
+        var str = prompts[R1] 
+
+        // Replace {A} & {B} in prompt with OTP names
+        var result = str.replace(/{A}/g, A).replace(/{B}/g, B);
+
+        document.getElementById("premise").innerHTML = result;
+    }
+
+    </script>
+
+<div>
+
+    <div id="main">
+
+        <form><input type="text" name="otp1" value="Person A" id="a" onfocus="clear1()"></form>
+        <form><input type="text" name="otp2" value="Person B" id="b" onfocus="clear2()"></form>
+        <div id="genbutt" onclick="fluff()">Generate</div>
+
+        <div id="text">
+
+            <b>Your prompt:</b>
+            <span id="premise"></span>
+            <br><br><br>
+            <div id="thanks"> Yet, another, SFW OTP prompt generator. <a href="/info">Info + Credits</a>
+
+            </div>
+
+        </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
