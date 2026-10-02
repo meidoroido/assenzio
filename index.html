@@ -83,6 +83,7 @@ body{
 background: var(--color);
 color: var(--font);
 font-size: 1em;
+font-family: times;
 }
 
 .link{
@@ -115,7 +116,34 @@ color: var(--link);
 border-color: var(--link);
 }
     
-    
+ 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--link);
+  cursor: crosshair;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: var(--color);
+  color: var(--font);
+  text-align: center;
+  border: 1px dotted var(--link);
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 65%;
+  margin-left: -65px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 
 @media (max-width:800px){
 
@@ -191,7 +219,13 @@ Tutto il sito, per ora, è in italiano, ma provvederò a fare una traduzione del
 <br><br>
 Il sito non è perfettamente formattato per mobile, ma dovrebbe comunque essere compatibile.
 <br><br>
-<a href="https://www.mabsland.com/Adoption.html"><img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/Censor.png" width="88px" height="31px"></a> <img src="https://i.postimg.cc/mrzQnsxW/dumb-web.gif" width="88px" height="31px"> <img src="https://i.postimg.cc/TPLrs68X/no-child.png" width="88px" height="31px"> <a href="https://notbyai.fyi/"><img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/Produced-By-Human-Not-By-AI-Badge-white.png" width="88px" height="31px"></a>
+
+<div class="tooltip"><b>Al momento non sono presenti contenuti NSFW, ma il mio sito è consigliato solo per un pubblico adulto è può contenere materile sensibile.</b>
+  <span class="tooltiptext">ENG: this is a NSFW site, despite not having explicit NSFW content yet</span>
+</div>
+<br><br>
+
+<a href="https://www.mabsland.com/Adoption.html"><img src="https://file.garden/ard98b23HZ4-I5i_/assenzio/warning.png" width="88px" height="31px"></a> <img src="https://i.postimg.cc/mrzQnsxW/dumb-web.gif" width="88px" height="31px"> <img src="https://i.postimg.cc/TPLrs68X/no-child.png" width="88px" height="31px"> <a href="https://notbyai.fyi/"><img src="https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/Produced-By-Human-Not-By-AI-Badge-white.png" width="88px" height="31px"></a>
 
 <br><br>
 
