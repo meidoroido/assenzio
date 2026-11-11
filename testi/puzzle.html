@@ -1,0 +1,250 @@
+<html>
+
+<head>
+    
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial scale=1">
+<title>Puzzle</title>
+<link rel="shortcut icon" href="/">
+
+
+<style>
+
+@font-face {
+  font-family: 'webfont';
+  src: url(https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/000webfont.ttf);
+}
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+}
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+--h3: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+--h3: #90e0ef;
+}
+
+
+a{
+color: var(--link);
+text-decoration: none;
+}
+
+a:hover{
+color: var(--link);
+text-decoration: underline dotted;
+cursor: crosshair;
+}
+
+a:visited{
+color: var(--link);
+}
+
+::selection{
+background: #00b4d8;
+color: #fff;
+}
+
+h2{
+color: var(--h2)
+}
+
+h3{
+color: var(--h3)
+}
+
+b, i{
+color: #e5383b;
+}
+
+hr{
+  border-top: 1px solid var(--font);
+  border-bottom: none;
+}
+
+
+body{
+background: var(--color);
+color: var(--font);
+font-size: 1em;
+font-family: times;
+}
+
+.main{
+width: 40%;
+margin-right: auto;
+margin-top: 1em;
+}
+
+.theme-toggle {
+all: unset;
+position: fixed;
+top: 10px; right: 10px;
+color: var(--link);
+padding: 0.2em;
+font-weight: bold;
+border: 1px dotted var(--link);
+cursor: crosshair;
+z-index: 1000;
+}
+body.✿ .theme-toggle {
+color: var(--link);
+border-color: var(--link);
+}
+
+
+@media (max-width:800px){
+
+.main{
+width: 95%;
+}
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+ <button id="theme-toggle" class="theme-toggle">dark theme</button>
+
+   <script>
+    /* === this is the script for the colour change! Put it before you close the </body> === */
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(t) {
+      document.body.classList.remove('❀','✿');
+      document.body.classList.add(t);
+      localStorage.setItem('theme', t);
+      /* === here u can change the emoji or writing that appears on the button === */
+     btn.textContent = t === '✿' ? '✿' : '❀';
+    }
+
+    if (saved === '❀' || saved === '✿') {
+      setTheme(saved);
+    } else {
+      const dark = window.matchMedia('(prefers-color-scheme: ✿)').matches;
+      setTheme(dark ? '✿' : '❀');
+    }
+
+    btn.addEventListener('click', () => {
+      const current = document.body.classList.contains('✿') ? '✿' : '❀';
+      setTheme(current === '✿' ? '❀' : '✿');
+    });
+  </script>
+  
+<div class="main">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZeDkfnTxtys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br><br>
+
+T'investirò
+<br>
+E sì che ho perso ogni merito
+<br>
+Mi includerai mai
+<br>
+Nell'inferno in cui vivi tu
+<br>
+Sei fumo o hashish? Benzina o cenere?
+<br>
+M'includerai mai?
+<br><br>
+
+Oh oh mi serve un sì
+<br>
+Oh oh tu dimmi dove sei
+<br>
+Oh oh
+<br><br>
+
+Ti siedi qui un po'
+<br>
+Eh si che hai perso ogni livido
+<br>
+Ti prude oramai
+<br>
+Vai di fretta e non vivi più
+<br>
+La slot machine pensi sia un demone
+<br>
+M'includerai mai?
+<br><br>
+
+Oh oh mi serve un sì
+<br>
+È solo un mare nero
+<br>
+Che annullerà qualsiasi no, no
+<br>
+È solo un mare nero
+<br>
+Come s'infuria in me
+<br><br>
+
+Chiamami Nevruz
+<br>
+Raccogli il mio seme
+<br>
+E lo giuro che un timone c'hai
+<br>
+Lo fa chi ci crede
+<br>
+E lo tieni da chilometri
+<br>
+Ma è l'amore che lo muove, sai?
+<br>
+Efedrina, efredina
+<br><br>
+
+Poi ti siedi qui, Carol ma sì
+<br>
+Già ti senti nuda un po'
+<br>
+E riammettimi, dai, fra i tuoi demoni
+<br>
+E iniettami aria
+<br>
+Troverai l'energie
+<br>
+Iniettami aria
+<br><br>
+
+Se sogni è meglio poi
+<br>
+Che nulla ti tiene qui
+<br>
+
+<br><br>
+
+
+</div>
+  
+</body>
+
+</html>
