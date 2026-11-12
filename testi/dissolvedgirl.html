@@ -1,1 +1,237 @@
+<html>
 
+<head>
+    
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width, initial scale=1">
+<title>Dissolved girl</title>
+<link rel="shortcut icon" href="/">
+
+
+<style>
+
+@font-face {
+  font-family: 'webfont';
+  src: url(https://file.garden/aP5vCKAZw0hKw66q/Qualcosa/000webfont.ttf);
+}
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+}
+
+:root, body.❀{
+--color: #fff;
+--font: #000;
+--link: #77bfa3;
+--h2: #00b4d8;
+--h3: #00b4d8;
+}
+
+body.✿{
+--color: #000;
+--font: #fff;
+--link: #bfd8bd;
+--h2: #90e0ef;
+--h3: #90e0ef;
+}
+
+
+a{
+color: var(--link);
+text-decoration: none;
+}
+
+a:hover{
+color: var(--link);
+text-decoration: underline dotted;
+cursor: crosshair;
+}
+
+a:visited{
+color: var(--link);
+}
+
+::selection{
+background: #00b4d8;
+color: #fff;
+}
+
+h2{
+color: var(--h2)
+}
+
+h3{
+color: var(--h3)
+}
+
+b, i{
+color: #e5383b;
+}
+
+hr{
+  border-top: 1px solid var(--font);
+  border-bottom: none;
+}
+
+
+body{
+background: var(--color);
+color: var(--font);
+font-size: 1em;
+font-family: times;
+}
+
+.main{
+width: 40%;
+margin-right: auto;
+margin-top: 1em;
+}
+
+.theme-toggle {
+all: unset;
+position: fixed;
+top: 10px; right: 10px;
+color: var(--link);
+padding: 0.2em;
+font-weight: bold;
+border: 1px dotted var(--link);
+cursor: crosshair;
+z-index: 1000;
+}
+body.✿ .theme-toggle {
+color: var(--link);
+border-color: var(--link);
+}
+
+
+@media (max-width:800px){
+
+.main{
+width: 95%;
+}
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+ <button id="theme-toggle" class="theme-toggle">dark theme</button>
+
+   <script>
+    /* === this is the script for the colour change! Put it before you close the </body> === */
+    const btn = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(t) {
+      document.body.classList.remove('❀','✿');
+      document.body.classList.add(t);
+      localStorage.setItem('theme', t);
+      /* === here u can change the emoji or writing that appears on the button === */
+     btn.textContent = t === '✿' ? '✿' : '❀';
+    }
+
+    if (saved === '❀' || saved === '✿') {
+      setTheme(saved);
+    } else {
+      const dark = window.matchMedia('(prefers-color-scheme: ✿)').matches;
+      setTheme(dark ? '✿' : '❀');
+    }
+
+    btn.addEventListener('click', () => {
+      const current = document.body.classList.contains('✿') ? '✿' : '❀';
+      setTheme(current === '✿' ? '❀' : '✿');
+    });
+  </script>
+  
+<div class="main">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ABQjT6gDKu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br><br>
+
+Shame, such a shame
+<br>
+I think I kinda lost myself again
+<br>
+Day, yesterday
+<br>
+Really should be leaving, but I stay
+<br><br>
+
+Say, say my name
+<br>
+I need a little love to ease the pain
+<br>
+I need a little love to ease the pain
+<br>
+It's easy to remember when it came
+<br><br>
+
+'Cause it feels like I've been
+<br>
+I've been here before
+<br>
+You're not my saviour
+<br>
+But I still don't go
+<br>
+Feels like something
+<br>
+That I've done before
+<br>
+I could fake it
+<br>
+But I'd still want more
+<br><br>
+
+Fade, made to fade
+<br>
+Passion's overrated anyway
+<br>
+Say, say my name
+<br>
+I need a little love to ease the pain
+<br>
+I need a little love to ease the pain
+<br>
+It's easy to remember when it came
+<br><br>
+
+'Cause it feels like I've been
+<br>
+I've been here before
+<br>
+You’re not my saviour
+<br>
+But I still don't go, oh
+<br>
+I feel like something
+<br>
+That I've done before
+<br>
+I could fake it
+<br>
+But I'd still want more, oh
+
+<br><br>
+
+
+</div>
+  
+</body>
+
+</html>
